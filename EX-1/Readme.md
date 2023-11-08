@@ -1,66 +1,81 @@
-# EXP 1: DATA DEFENITION LANGUGE COMMANDS IN RDBMS
+# EXP NO 1 : DATA DEFINITION LANGUAGE COMMANDS IN RDBMS
 
-## AIM:
+## DATE : 03/08/23
+
+## AIM :
+
 To create a student database and execute DDL queries using SQL.
 
-## DDL (Data Definition Language)
+## DDL (Data Definition Language) :
+
 DDL or Data Definition Language actually consists of the SQL commands that can be used to define the database schema. It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in the database. DDL is a set of SQL commands used to create, modify, and delete database structures but not data. These commands are normally not used by a general user, who should be accessing the database via an application.
 
-## List of DDL commands: 
+## List of DDL commands :
 
-CREATE: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
+CREATE: This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers). 
+
 DROP: This command is used to delete objects from the database.
-ALTER: This is used to alter the structure of the database.
-TRUNCATE: This is used to remove all records from a table, including all spaces allocated for the records are removed.
+
+ALTER: This is used to alter the structure of the database. 
+
+TRUNCATE: This is used to remove all records from a table, including all spaces allocated for the records are removed. 
+
 RENAME: This is used to rename an object existing in the database.
 
-## Query:
-1) Create a table student with the following fieds rollno,name,age,address,phoneno.
+## Query :
 
-### SQL QUERY: 
-CREATE TABLE STUDENTT(rollno INT PRIMARY KEY,name1 VARCHAR(255),age INT,address VARCHAR(255),phoneno VARCHAR(15));
+### 1) Create a table student with the following fieds rollno,name,age,address,phoneno.
 
-### OUTPUT:
-![image](https://github.com/Harishspice/Database-Management-System/assets/117935868/be69f271-ddfe-46ca-8b46-e8b3a5e75eb7)
+### SQL QUERY :
+```
+create table student(rollno numeric(10),name char(10),age numeric(5),
+address varchar(25),phoneno numeric(15));
+```
+### OUTPUT :
 
-2) Change the above student table by adding another attribute department
+![D11](https://github.com/Abrinnisha6/G2_DBMS/assets/118889454/63d9d766-c801-4c45-8753-eb31efb4a28e)
 
+### 2) Change the above student table by adding another attribute department.
 
-### SQL QUERY: 
-ALTER TABLE STUDENTT ADD dept VARCHAR(50);
+### SQL QUERY :
+```
+alter table student add department varchar(15);
+```
+### OUTPUT :
 
-### OUTPUT:
-![image](https://github.com/Harishspice/Database-Management-System/assets/117935868/b4839039-c99a-4e52-9af5-5d5c03837a5a)
+![D12](https://github.com/Abrinnisha6/G2_DBMS/assets/118889454/86ffd4da-0eac-4ed4-b81d-31cf92739588)
 
+### 3) Drop the student table.
 
-3) Drop the student table
+### SQL QUERY :
+```
+drop table student;
+```
+### OUTPUT :
 
-### SQL QUERY: 
- DROP TABLE STUDENTT;
+![D13](https://github.com/Abrinnisha6/G2_DBMS/assets/118889454/34decc85-11d7-46e4-b71f-b639c322f9d9)
 
-### OUTPUT:
-![image](https://github.com/Harishspice/Database-Management-System/assets/117935868/e5f80cf2-1309-4c44-a663-aea6719866cb)
+### 4) Delete the student table using truncate keyword.
 
+### SQL QUERY :
+```
+truncate table student;
+```
+### OUTPUT :
 
-4) Delete the student table using truncate keyword
-
-### SQL QUERY: 
-TRUNCATE TABLE STUDENTTT;
-
-### OUTPUT:
-![image](https://github.com/Harishspice/Database-Management-System/assets/117935868/5abdc2a9-393e-4d4d-8823-5476e31ffbe7)
-
-
-
-5) Rename the student table to mystudent
-
-   
-### SQL QUERY: 
-ALTER TABLE STUDENTT RENAME TO mystudent;
-
-
-### OUTPUT:
-![image](https://github.com/Harishspice/Database-Management-System/assets/117935868/3f1960c8-15ee-4535-8e6d-f6aadea78ab6)
+![D14](https://github.com/Abrinnisha6/G2_DBMS/assets/118889454/fd65bc49-0406-441d-9a5d-270aad6155ed)
 
 
+### 5) Rename the student table to mystudent.
 
+### SQL QUERY :
+```
+rename table student to mystudent;
+```
+### OUTPUT :
+
+![D15](https://github.com/Abrinnisha6/G2_DBMS/assets/118889454/8f7bdfde-5e4d-4a81-a4e0-f7b54c975518)
+
+## RESULT :
+
+The queries got the output and statifies the given question.
